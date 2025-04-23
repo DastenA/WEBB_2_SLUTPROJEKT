@@ -1,10 +1,10 @@
-
-
-<h1 class="text-2xl font-bold p-4 text-center">TOTALLY HONEST CASINO</h1>
+<div class="grid gap-4 m-2">
+  <a href="/" class="text-2xl font-bold p-4 text-center">TOTALLY HONEST CASINO</a>
+</div>
 
 <section class="p-8 bg-amber-100">
-    <h1>About us</h1>
-	<p>At the Totally Honest Casino, we don’t believe in sugarcoating the truth. The house always wins. It’s not just a saying—it’s a statistical fact, and we’re proud of it. Our games are designed to keep you entertained, but let’s be honest: the longer you play, the more we make. That’s how casinos work, and we won’t pretend otherwise.</p>
+    <h2 class="text-center text-xl">About us</h2>
+	  <p>At the Totally Honest Casino, we don’t believe in sugarcoating the truth. The house always wins. It’s not just a saying—it’s a statistical fact, and we’re proud of it. Our games are designed to keep you entertained, but let’s be honest: the longer you play, the more we make. That’s how casinos work, and we won’t pretend otherwise.</p>
     <br>
     <p>Our slot machines? Rigged in our favor. Our blackjack tables? Structured so you lose over time. Roulette? We added that extra green zero for a reason. But hey, at least we’re upfront about it! No misleading slogans, no false promises—just pure, unfiltered raw gambling.</p>
     <br>
@@ -15,10 +15,10 @@
 
 <section class="p-8 bg-amber-100">
   <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 m-2">
-    <div class="bg-yellow-200 p-2 rounded-lg shadow-lg">Game 1</div>
-    <div class="bg-red-200 p-2 rounded-lg shadow-lg">Game 2</div>
-    <div class="bg-orange-200 p-2 rounded-lg shadow-lg">Game 3</div>
-    <div class="bg-white p-2 rounded-lg shadow-lg">Game 4</div>
+    <a href="/games/slots" class="bg-yellow-200 p-2 rounded-lg shadow-lg">Slots</a>
+    <a href="/games/blackjack" class="bg-red-200 p-2 rounded-lg shadow-lg">Blackjack</a>
+    <a href="/" class="bg-orange-200 p-2 rounded-lg shadow-lg">Game 3</a>
+    <a href="/" class="bg-white p-2 rounded-lg shadow-lg">Game 4</a>
   </div>
 </section>
 
