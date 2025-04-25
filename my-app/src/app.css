@@ -2,7 +2,3 @@
 /*@plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';*/
 
-
-* {
-    font-size: 20px;
-}

@@ -1,5 +1,5 @@
 <div class="grid gap-4 m-2">
-  <a href="/" class="text-2xl font-bold p-4 text-center">TOTALLY HONEST CASINO</a>
+  <a href="/" class="text-2xl font-bold p-4 text-center bg-amber-500">TOTALLY HONEST CASINO</a>
 </div>
 
 <section class="p-8 bg-amber-100">
