@@ -1,11 +1,12 @@
 <script>
+	import blackjack from '$lib/images/blackjack.jpg';
+
 	let deck = [];
 	let playerHand = [];
 	let dealerHand = [];
 	let gameOver = false;
 	let message = "Welcome to Totally Honest Blackjack™";
 
-	// Create and shuffle a new deck
 	function initDeck() {
 		const suits = ["♠", "♥", "♦", "♣"];
 		const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
@@ -62,8 +63,15 @@
 
 	function stand() {
 		if (gameOver) return;
-		while (handValue(dealerHand) < 17) {
+
+		// Dealer cheats: keep drawing until exactly 20 or 21
+		while (handValue(dealerHand) < 20) {
 			dealerHand = [...dealerHand, deck.pop()];
+		}
+
+		// If somehow dealer busts (rare), remove last card
+		if (handValue(dealerHand) > 21) {
+			dealerHand.pop();
 		}
 
 		const playerScore = handValue(playerHand);
@@ -80,36 +88,52 @@
 	}
 </script>
 
-<section class="max-w-xl mx-auto bg-green-100 p-6 rounded-xl shadow-lg text-center">
-	<h2 class="text-2xl font-bold mb-4">Totally Honest Blackjack™</h2>
 
-	<div class="mb-4">
-		<h3 class="font-semibold">Your Hand ({handValue(playerHand)})</h3>
-		<p>
-			{#each playerHand as card}
-				{card.value}{card.suit}{" "}
-			{/each}
-		</p>
-	</div>
+<!-- Header -->
+<div class="grid bg-black">
+    <a href="/" class="text-2xl font-bold p-4 text-center text-white">TOTALLY HONEST CASINO</a>
+</div>
 
-	<div class="mb-4">
-		<h3 class="font-semibold">Dealer's Hand ({gameOver ? handValue(dealerHand) : "?"})</h3>
-		<p>
-			{#each dealerHand as card, i}
-				{#if i === 0 || gameOver}
-					{card.value}{card.suit}{" "}
-				{:else}
-					??
-				{/if}
-			{/each}
-		</p>
-	</div>
+<!-- Centered Content (No background image) -->
+<div class="min-h-screen flex items-center justify-center bg-cover bg-center p-5" style="background-image: url({blackjack}); bg-amber-100">
+    <section class="flex flex-col items-center max-w-lg opacity-85 justify-center gap-6 p-10 bg-white rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold">Totally Honest Blackjack™</h2>
+        <p>Try your luck at our totally fair Blackjack table!</p>
+        <p>Remember: The house always wins... eventually.</p>
 
-	<p class="my-4 italic">{message}</p>
+        <div class="text-center">
+            <h3 class="font-semibold">Your Hand ({handValue(playerHand)})</h3>
+            <p>
+                {#each playerHand as card}
+                    {card.value}{card.suit}{" "}
+                {/each}
+            </p>
+        </div>
 
-	<div class="space-x-4">
-		<button on:click={deal} class="bg-blue-500 text-white px-4 py-2 rounded">Deal</button>
-		<button on:click={hit} class="bg-yellow-500 text-white px-4 py-2 rounded">Hit</button>
-		<button on:click={stand} class="bg-red-500 text-white px-4 py-2 rounded">Stand</button>
-	</div>
-</section>
+        <div class="text-center">
+            <h3 class="font-semibold">Dealer's Hand ({gameOver ? handValue(dealerHand) : "?"})</h3>
+            <p>
+                {#each dealerHand as card, i}
+                    {#if i === 0 || gameOver}
+                        {card.value}{card.suit}{" "}
+                    {:else}
+                        ??
+                    {/if}
+                {/each}
+            </p>
+        </div>
+
+        <p class="my-4 italic">{message}</p>
+
+        <div class="flex gap-4">
+            <button on:click={deal} class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-600 transition">Deal</button>
+            <button on:click={hit} class="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow hover:bg-yellow-600 transition">Hit</button>
+            <button on:click={stand} class="bg-red-500 text-white px-6 py-2 rounded-lg shadow hover:bg-red-600 transition">Stand</button>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="bg-black p-3 text-center">
+    <p class="footer_text text-white">&copy;TOTALLY HONEST CASINO</p>
+</footer>
