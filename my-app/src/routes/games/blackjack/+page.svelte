@@ -125,7 +125,7 @@
 
         <p class="my-4 italic">{message}</p>
 
-        <div class="flex gap-4">
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
             <button on:click={deal} class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-600 transition">Deal</button>
             <button on:click={hit} class="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow hover:bg-yellow-600 transition">Hit</button>
             <button on:click={stand} class="bg-red-500 text-white px-6 py-2 rounded-lg shadow hover:bg-red-600 transition">Stand</button>

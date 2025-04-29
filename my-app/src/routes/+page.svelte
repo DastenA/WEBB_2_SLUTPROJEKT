@@ -8,7 +8,7 @@
   </div>
 
 <div class="bg-cover bg-center p-5" style="background-image: url({casino});">
-  <section class="p-8 opacity-85 bg-amber-100">
+  <section class="p-8 opacity-85 bg-white">
       <h2 class="text-center text-xl">About us</h2>
       <p>At the Totally Honest Casino, we don’t believe in sugarcoating the truth. The house always wins. It’s not just a saying—it’s a statistical fact, and we’re proud of it. Our games are designed to keep you entertained, but let’s be honest: the longer you play, the more we make. That’s how casinos work, and we won’t pretend otherwise.</p>
       <br>
@@ -19,12 +19,10 @@
       <p>So come on in, take a spin, roll the dice, and enjoy the thrill—just don’t say we didn’t warn you. Welcome to the Totally Honest Casino, where transparency is our game, and your money is our prize!</p>
   </section>
 
-  <section class="p-8 opacity-85 bg-amber-100">
+  <section class="p-8 opacity-85 bg-none">
     <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 m-2">
-      <a href="/games/slots" class="bg-yellow-200 p-2 rounded-lg shadow-lg">Slots</a>
-      <a href="/games/blackjack" class="bg-red-200 p-2 rounded-lg shadow-lg">Blackjack</a>
-      <a href="/" class="bg-orange-200 p-2 rounded-lg shadow-lg">Game 3</a>
-      <a href="/" class="bg-white p-2 rounded-lg shadow-lg">Game 4</a>
+      <a href="/games/slots" class="bg-green-200 p-2 rounded-lg shadow-lg">Slots</a>
+      <a href="/games/blackjack" class="bg-green-200 p-2 rounded-lg shadow-lg">Blackjack</a>
     </div>
   </section>
 </div>
