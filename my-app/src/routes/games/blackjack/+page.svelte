@@ -130,6 +130,9 @@
             <button on:click={hit} class="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow hover:bg-yellow-600 transition">Hit</button>
             <button on:click={stand} class="bg-red-500 text-white px-6 py-2 rounded-lg shadow hover:bg-red-600 transition">Stand</button>
         </div>
+		<div>
+			<a href="/games/slots" class="bg-green-200 p-2 rounded-lg shadow-lg">Wanna try out our rigged Slots?</a>
+		</div>
     </section>
 </div>
 
